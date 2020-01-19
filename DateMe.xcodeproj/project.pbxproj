@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA514EB323C5C2D40064EEBF /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA514EB223C5C2D40064EEBF /* Cocktail.swift */; };
+		EA54E97423CB866600076437 /* HomeViewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54E97323CB866600076437 /* HomeViewTab.swift */; };
+		EA54E97623CB897300076437 /* SearchViewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54E97523CB897300076437 /* SearchViewTab.swift */; };
+		EA54E97823CB911E00076437 /* RandomViewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54E97723CB911E00076437 /* RandomViewTab.swift */; };
 		EACC8A3E23C49940006BE674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC8A3D23C49940006BE674 /* AppDelegate.swift */; };
 		EACC8A4023C49940006BE674 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC8A3F23C49940006BE674 /* SceneDelegate.swift */; };
 		EACC8A4223C49940006BE674 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC8A4123C49940006BE674 /* ContentView.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA514EB223C5C2D40064EEBF /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		EA54E97323CB866600076437 /* HomeViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTab.swift; sourceTree = "<group>"; };
+		EA54E97523CB897300076437 /* SearchViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTab.swift; sourceTree = "<group>"; };
+		EA54E97723CB911E00076437 /* RandomViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewTab.swift; sourceTree = "<group>"; };
 		EACC8A3A23C49940006BE674 /* DateMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACC8A3D23C49940006BE674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EACC8A3F23C49940006BE674 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA514EB123C5C2770064EEBF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EA514EB223C5C2D40064EEBF /* Cocktail.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		EACC8A3123C49940006BE674 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +115,7 @@
 		EACC8A3C23C49940006BE674 /* DateMe */ = {
 			isa = PBXGroup;
 			children = (
+				EA514EB123C5C2770064EEBF /* model */,
 				EACC8A3D23C49940006BE674 /* AppDelegate.swift */,
 				EACC8A3F23C49940006BE674 /* SceneDelegate.swift */,
 				EACC8A4123C49940006BE674 /* ContentView.swift */,
@@ -106,6 +123,9 @@
 				EACC8A4823C49942006BE674 /* LaunchScreen.storyboard */,
 				EACC8A4B23C49942006BE674 /* Info.plist */,
 				EACC8A4523C49942006BE674 /* Preview Content */,
+				EA54E97323CB866600076437 /* HomeViewTab.swift */,
+				EA54E97523CB897300076437 /* SearchViewTab.swift */,
+				EA54E97723CB911E00076437 /* RandomViewTab.swift */,
 			);
 			path = DateMe;
 			sourceTree = "<group>";
@@ -267,9 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA54E97623CB897300076437 /* SearchViewTab.swift in Sources */,
 				EACC8A3E23C49940006BE674 /* AppDelegate.swift in Sources */,
+				EA54E97423CB866600076437 /* HomeViewTab.swift in Sources */,
 				EACC8A4023C49940006BE674 /* SceneDelegate.swift in Sources */,
 				EACC8A4223C49940006BE674 /* ContentView.swift in Sources */,
+				EA514EB323C5C2D40064EEBF /* Cocktail.swift in Sources */,
+				EA54E97823CB911E00076437 /* RandomViewTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DateMe/Preview Content\"";
+				DEVELOPMENT_TEAM = 2FFS5V4S8H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DateMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DateMe/Preview Content\"";
+				DEVELOPMENT_TEAM = 2FFS5V4S8H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DateMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

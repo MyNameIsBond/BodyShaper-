@@ -10,7 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        TabView {
+            RandomViewTab().tabItem{
+                    VStack {
+                    Image(systemName: "tv.fill")
+                    }
+            }.tag(0)
+            
+            HomeViewTab().tabItem{
+                    VStack {
+                    Image(systemName: "square.grid.2x2.fill")
+                    }
+            }.tag(1)
+            
+            SearchViewTab().tabItem{
+                    VStack {
+                    Image(systemName: "magnifyingglass")
+                    }
+            }.tag(2)
+        }
     }
 }
 
