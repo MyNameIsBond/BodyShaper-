@@ -11,21 +11,25 @@ import SwiftUI
 struct HomeViewTab: View {
     var body: some View {
         NavigationView() {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    Text("Trends")
-                    Spacer()
-                    Button("See All"){
-                        // Commit your code!
+            ScrollView {
+                VStack {
+                    HStack(alignment: .center) {
+                        Text("lol")
+                        Spacer()
+                        Button("See All"){
+                            // Lol
+                        }
                     }
-                }
-                HStack(alignment: .top) {
-                    ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                        VCard()
-                            .frame(width: 300)
-                            .padding(.trailing, 30)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .top) {
+                            ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                                VCard()
+                                    .frame(width: 300)
+                                    .padding(.trailing, 30)
+                            }
+                        }
                     }
-                }
+                }.edgesIgnoringSafeArea(.trailing)
             }
         }
     }
