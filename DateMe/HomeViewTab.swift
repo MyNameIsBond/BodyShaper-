@@ -13,24 +13,24 @@ struct HomeViewTab: View {
         NavigationView() {
             ScrollView {
                 VStack {
-                    HStack(alignment: .center) {
+                    HStack {
                         Text("lol")
                         Spacer()
                         Button("See All"){
                             // Lol
                         }
-                    }
+                    }.padding(.all)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top) {
-                            ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                            ForEach(0 ..< 5) { item in
                                 VCard()
-                                    .frame(width: 300)
-                                    .padding(.trailing, 30)
                             }
-                        }
+                        }.padding(.leading)
+                        
                     }
-                }.edgesIgnoringSafeArea(.trailing)
+                }.navigationBarTitle("Dolores")
             }
+            
         }
     }
 }
@@ -52,7 +52,7 @@ struct VCard: View {
         VStack(alignment: .leading, spacing: 5.0) {
             Text("Margarita")
                 .font(.headline)
-            Text("this is one of the best cocktails ever made")
+            Text("this is one of the best cocktails ever made this is one of the best cocktails ever made")
                 .multilineTextAlignment(.leading)
                 .font(.subheadline)
                 .lineLimit(2)
