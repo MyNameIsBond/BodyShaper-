@@ -19,7 +19,7 @@ struct HomeViewTab: View {
                         Button("See All"){
                             // Lol
                         }
-                    }.padding(.all)
+                    }
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top) {
                             ForEach(0 ..< 5) { item in
@@ -28,7 +28,8 @@ struct HomeViewTab: View {
                         }.padding(.leading)
                         
                     }
-                }.navigationBarTitle("Dolores")
+                }.navigationBarTitle("Home")
+                
             }
             
         }
@@ -50,14 +51,17 @@ struct VCard: View {
     .frame(width: 250, height: 170)
     .cornerRadius(10)
         VStack(alignment: .leading, spacing: 5.0) {
-            Text("Margarita")
+            Text("Margarita this is one of the best cocktails ever made this is one o this is one of the best cocktails ever made this is one o ")
                 .font(.headline)
-            Text("this is one of the best cocktails ever made this is one of the best cocktails ever made")
-                .multilineTextAlignment(.leading)
+                .lineLimit(1)
+            Text("this is one of the best cocktails ever made this is one of the best cocktails ever made Ela re mounaki")
                 .font(.subheadline)
-                .lineLimit(2)
-            }
+                .lineLimit(1)
+                
         }
+        }
+    .background(Color.pink)
+    .frame(width: 250, height:300)
     }
 }
 

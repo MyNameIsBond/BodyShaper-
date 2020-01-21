@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		EA514EB223C5C2D40064EEBF /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
-		EA54E97323CB866600076437 /* HomeViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTab.swift; sourceTree = "<group>"; };
+		EA54E97323CB866600076437 /* HomeViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTab.swift; sourceTree = "<group>"; usesTabs = 0; };
 		EA54E97523CB897300076437 /* SearchViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTab.swift; sourceTree = "<group>"; };
 		EA54E97723CB911E00076437 /* RandomViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewTab.swift; sourceTree = "<group>"; };
 		EACC8A3A23C49940006BE674 /* DateMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
