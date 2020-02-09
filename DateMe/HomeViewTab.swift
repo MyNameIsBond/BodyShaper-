@@ -12,24 +12,9 @@ struct HomeViewTab: View {
     var body: some View {
         NavigationView() {
             ScrollView {
-                VStack {
-                    HStack {
-                        Text("lol")
-                        Spacer()
-                        Button("See All"){
-                            // Lol
-                        }
-                    }
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top) {
-                            ForEach(0 ..< 5) { item in
-                                VCard()
-                            }
-                        }.padding(.leading)
-                        
-                    }
-                }.navigationBarTitle("Home")
-                
+                VCard()
+                 VCard()
+                 VCard()
             }
             
         }
@@ -43,25 +28,21 @@ struct HomeViewTab: View {
 
 struct VCard: View {
     var body: some View {
-    VStack(alignment: .leading, spacing: 16.0) {
-    Image("cocktail1")
-    .resizable()
-    .renderingMode(.original)
-    .aspectRatio(contentMode: .fill)
-    .frame(width: 250, height: 170)
-    .cornerRadius(10)
-        VStack(alignment: .leading, spacing: 5.0) {
-            Text("Margarita this is one of the best cocktails ever made this is one o this is one of the best cocktails ever made this is one o ")
-                .font(.headline)
-                .lineLimit(1)
-            Text("this is one of the best cocktails ever made this is one of the best cocktails ever made Ela re mounaki")
-                .font(.subheadline)
-                .lineLimit(1)
-                
+        VStack {
+            HStack {
+                Text("Shoulders")
+                Spacer()
+                Text("see all")
+            }.padding()
+            VStack{
+                ScrollView(.horizontal,showsIndicators: false) {
+            Image("cocktail1").resizable()
+                Text("this is a cocktail very cook")
+                }.frame(height: 100)
+                    .background(Color.red)
+            }.frame(width: 100,height: 200)
+                .background(Color.yellow)
         }
-        }
-    .background(Color.pink)
-    .frame(width: 250, height:300)
     }
 }
 
