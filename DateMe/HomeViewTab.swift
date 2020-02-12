@@ -34,8 +34,8 @@ struct VCard: View {
                 Spacer()
                 Text("see all")
             }.padding()
-            VStack{
-                ScrollView(.horizontal,showsIndicators: false) {
+            ScrollView(.horizontal,showsIndicators: false) {
+                 VStack{
             Image("cocktail1").resizable()
                 Text("this is a cocktail very cook")
                 }.frame(height: 100)
