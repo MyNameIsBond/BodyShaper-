@@ -13,10 +13,7 @@ struct HomeViewTab: View {
         NavigationView() {
             ScrollView {
                 VCard()
-                 VCard()
-                 VCard()
             }
-            
         }
     }
 }
