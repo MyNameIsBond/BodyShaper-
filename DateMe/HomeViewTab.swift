@@ -11,6 +11,11 @@ import SwiftUI
 struct HomeViewTab: View {
     var body: some View {
         NavigationView() {
+            HStack {
+                Text("Shoulders")
+                Spacer()
+                Text("see all")
+            }.padding()
             ScrollView {
                 VCard()
             }
@@ -26,20 +31,16 @@ struct HomeViewTab: View {
 struct VCard: View {
     var body: some View {
         VStack {
-            HStack {
-                Text("Shoulders")
-                Spacer()
-                Text("see all")
-            }.padding()
             ScrollView(.horizontal,showsIndicators: false) {
                  VStack{
             Image("cocktail1").resizable()
                 Text("this is a cocktail very cook")
                 }.frame(height: 100)
                     .background(Color.red)
-            }.frame(width: 100,height: 200)
+            }.frame(height: 200)
+                .padding(.leading)
                 .background(Color.yellow)
-        }
+        }.frame(height: 100)
     }
 }
 
