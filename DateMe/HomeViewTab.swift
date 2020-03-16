@@ -19,7 +19,9 @@ struct HomeViewTab: View {
             ScrollView {
                 VCard()
             }
-        }
+            .padding()
+            Spacer()
+        }.edgesIgnoringSafeArea(.top)
     }
 }
 
@@ -32,8 +34,9 @@ struct VCard: View {
     var body: some View {
         VStack {
             ScrollView(.horizontal,showsIndicators: false) {
-                 VStack{
-            Image("cocktail1").resizable()
+                 VStack {
+                
+                Image("cocktail1").resizable()
                 Text("this is a cocktail very cook")
                 }.frame(height: 100)
                     .background(Color.red)
