@@ -10,12 +10,17 @@ import SwiftUI
 
 struct HomeViewTab: View {
     @State var photos: [Photos] = []
+
+    private func seeAll() {
+        print("Hello")
+    }
+    
     var body: some View {
         NavigationView() {
             HStack {
                 Text("Shoulders")
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: seeAll) {
                     Text("see all")
                     .onAppear{
                         Api().getPhotos { (photos) in
@@ -26,13 +31,16 @@ struct HomeViewTab: View {
                 }
             }.padding()
             ScrollView {
-                VCard()
+                ForEach(photos){ photo in
+                    VCard(photos: photo)
+                }
             }
             .padding()
-            Spacer()
-        }.edgesIgnoringSafeArea(.top)
+    }.edgesIgnoringSafeArea(.top)
     }
 }
+
+
 
 // The Vertical view in Home
 // Image - Url
@@ -40,13 +48,15 @@ struct HomeViewTab: View {
 // Subheadline - String
 
 struct VCard: View {
+    let photos: Photos
+    
     var body: some View {
         VStack {
             ScrollView(.horizontal,showsIndicators: false) {
                  VStack {
                 
                 Image("cocktail1").resizable()
-                Text("this is a cocktail very cook")
+                    Text(photos.title)
                 }.frame(height: 100)
                     .background(Color.red)
             }.frame(height: 200)
