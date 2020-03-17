@@ -9,12 +9,21 @@
 import SwiftUI
 
 struct HomeViewTab: View {
+    @State var photos: [Photos] = []
     var body: some View {
         NavigationView() {
             HStack {
                 Text("Shoulders")
                 Spacer()
-                Text("see all")
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Text("see all")
+                    .onAppear{
+                        Api().getPhotos { (photos) in
+                            self.photos = photos
+                            print(self.photos)
+                        }
+                    }
+                }
             }.padding()
             ScrollView {
                 VCard()
