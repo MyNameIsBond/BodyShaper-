@@ -9,26 +9,21 @@
 import SwiftUI
 
 struct HomeViewTab: View {
+    
     @State var photos: [Photos] = []
 
     private func seeAll() {
-        print("Hello")
+        print("See All")
     }
     
     var body: some View {
         NavigationView() {
             HStack {
-                Text("Shoulders")
-                Spacer()
-                Button(action: seeAll) {
-                    Text("see all")
-                    .onAppear{
-                        Api().getPhotos { (photos) in
-                            self.photos = photos
-                            print(self.photos)
-                        }
-                    }
-                }
+            Text("Shoulders")
+            Spacer()
+            Button(action: seeAll) {
+                Text("see all")
+            }
             }.padding()
             ScrollView {
                 ForEach(photos){ photo in

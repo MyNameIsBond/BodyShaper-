@@ -18,13 +18,18 @@ struct Photos: Codable, Identifiable {
 
 class Api {
     func getPhotos(completion: @escaping ([Photos]) -> ()) {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else { return }
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else {
+            fatalError("Someting's wrong with the URL")
+        }
+        URLSession.shared.dataTask(with: url) { (data, res, err) in
             let photos = try! JSONDecoder().decode([Photos].self, from: data!)
             
             DispatchQueue.main.async {
               completion(photos)
+                print(photos)
             }
         }.resume()
+        
+        return
     }
 }
