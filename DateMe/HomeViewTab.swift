@@ -57,7 +57,7 @@ struct VCard: View {
             }.frame(height: 200)
                 .padding(.leading)
                 .background(Color.yellow)
-        }.frame(height: 100)
+        }.frame(height: 100, maxWidth: 100)
     }
 }
 
