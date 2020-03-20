@@ -27,7 +27,7 @@ struct HomeViewTab: View {
             }.padding()
             ScrollView {
                 ForEach(photos){ photo in
-                    VCard(photos: photo)
+                    VCard()
                 }
             }
             .padding()
@@ -43,7 +43,6 @@ struct HomeViewTab: View {
 // Subheadline - String
 
 struct VCard: View {
-    let photos: Photos
     
     var body: some View {
         VStack {
@@ -51,13 +50,13 @@ struct VCard: View {
                  VStack {
                 
                 Image("cocktail1").resizable()
-                    Text(photos.title)
+                    Text("Hello")
                 }.frame(height: 100)
                     .background(Color.red)
             }.frame(height: 200)
                 .padding(.leading)
                 .background(Color.yellow)
-        }.frame(height: 100, maxWidth: 100)
+        }.frame(height: 100)
     }
 }
 
