@@ -29,6 +29,16 @@ struct HomeViewTab: View {
                 HStack {
                     VCard()
                 }
+                HStack {
+                    Text("Shoulders")
+                    Spacer()
+                    Button(action: seeAll) {
+                        Text("see all")
+                    }
+                }.padding(.horizontal)
+                HStack {
+                    VCard()
+                }
             }.edgesIgnoringSafeArea(.top)
         }
     }
@@ -47,32 +57,30 @@ struct VCard: View {
         VStack {
             ScrollView(.horizontal,showsIndicators: false) {
                 HStack {
-                VStack(alignment:.leading) {
-                    Image("cocktail1").resizable()
-                        .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
-                    Text("Hello").background(Color.green)
-                }.background(Color.red)
-                
-                VStack(alignment:.leading) {
-                   Image("cocktail1").resizable()
-                       .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
-                   Text("Hello").background(Color.green)
-               }.background(Color.red)
-                    
                     VStack(alignment:.leading) {
                         Image("cocktail1").resizable()
                             .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
-                        Text("Hello").background(Color.green)
-                    }.background(Color.red)
-                    
+                            .cornerRadius(4)
+                        Text("Hello")
+                            .font(.caption)
+                    }
                     VStack(alignment:.leading) {
                         Image("cocktail1").resizable()
                             .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
-                        Text("Hello").background(Color.green)
-                    }.background(Color.red)
-                }
-            }.background(Color.blue)
-        }.padding(.leading)
+                            .cornerRadius(4)
+                        Text("Hello")
+                            .font(.caption)
+                    }
+                    VStack(alignment:.leading) {
+                        Image("cocktail1").resizable()
+                            .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
+                            .cornerRadius(4)
+                        Text("Hello")
+                            .font(.caption)
+                    }
+                }.padding(.leading)
+            }
+        }
     }
 }
 
