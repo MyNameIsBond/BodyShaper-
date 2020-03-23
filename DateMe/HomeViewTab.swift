@@ -37,8 +37,10 @@ struct VCard: View {
                         Image("cocktail1").resizable()
                             .cornerRadius(4)
                         Text("Cocktail Dolores")
-                        Text("Cocktail Dolores")
-                            .font(.subheadline)
+                        .font(.footnote)
+                        Text("Cocktail Sub")
+                            .font(.footnote)
+                        
                             .fontWeight(.light)
                     }.frame(minWidth: 200, idealWidth: 200, maxWidth: 250, minHeight: 200, idealHeight: 200, maxHeight: 250)
                    
@@ -62,11 +64,10 @@ struct HorizontalView: View {
             HStack {
                 Text("Shoulders")
                     .fontWeight(.bold)
+                    .font(.headline)
                 Spacer()
-                Button(action: {
-                    print("See All")
-                }) {
-                    Text("see all")
+                NavigationLink(destination: SeeAllGrid()) {
+                    Text("See All")
                 }
             }.padding(.horizontal)
             HStack {
