@@ -1,10 +1,3 @@
-//
-//  HomeViewTab.swift
-//  DateMe
-//
-//  Created by Tony Hajdini on 12/01/2020.
-//  Copyright © 2020 Tony Hajdini. All rights reserved.
-//
 
 import SwiftUI
 
@@ -61,23 +54,17 @@ struct VCard: View {
                         Image("cocktail1").resizable()
                             .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
                             .cornerRadius(4)
-                        Text("Hello")
+                        Text("1a")
                             .font(.caption)
                     }
                     VStack(alignment:.leading) {
                         Image("cocktail1").resizable()
                             .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
                             .cornerRadius(4)
-                        Text("Hello")
+                        Text("2a")
                             .font(.caption)
                     }
-                    VStack(alignment:.leading) {
-                        Image("cocktail1").resizable()
-                            .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
-                            .cornerRadius(4)
-                        Text("Hello")
-                            .font(.caption)
-                    }
+                   
                 }.padding(.leading)
             }
         }
