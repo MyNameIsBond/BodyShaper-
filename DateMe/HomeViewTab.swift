@@ -11,28 +11,11 @@ struct HomeViewTab: View {
     
     var body: some View {
         NavigationView() {
-            VStack {
-                HStack {
-                    Text("Shoulders")
-                    Spacer()
-                    Button(action: seeAll) {
-                        Text("see all")
-                    }
-                }.padding(.horizontal)
-                HStack {
-                    VCard()
-                }
-                HStack {
-                    Text("Shoulders")
-                    Spacer()
-                    Button(action: seeAll) {
-                        Text("see all")
-                    }
-                }.padding(.horizontal)
-                HStack {
-                    VCard()
-                }
-            }.edgesIgnoringSafeArea(.top)
+        ScrollView {
+            HorizontalView()
+        }
+        .navigationBarTitle("Exercises", displayMode: .automatic)
+        
         }
     }
 }
@@ -48,22 +31,16 @@ struct VCard: View {
     
     var body: some View {
         VStack {
-            ScrollView(.horizontal,showsIndicators: false) {
+            ScrollView(.horizontal,showsIndicators: true) {
                 HStack {
                     VStack(alignment:.leading) {
                         Image("cocktail1").resizable()
-                            .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
                             .cornerRadius(4)
-                        Text("1a")
-                            .font(.caption)
-                    }
-                    VStack(alignment:.leading) {
-                        Image("cocktail1").resizable()
-                            .frame(minWidth: 100, idealWidth: 150, maxWidth: 200, minHeight: 100, idealHeight: 150, maxHeight: 200)
-                            .cornerRadius(4)
-                        Text("2a")
-                            .font(.caption)
-                    }
+                        Text("Cocktail Dolores")
+                        Text("Cocktail Dolores")
+                            .font(.subheadline)
+                            .fontWeight(.light)
+                    }.frame(minWidth: 200, idealWidth: 200, maxWidth: 250, minHeight: 200, idealHeight: 200, maxHeight: 250)
                    
                 }.padding(.leading)
             }
@@ -71,8 +48,30 @@ struct VCard: View {
     }
 }
 
+
+
 struct HomeViewTab_Previews: PreviewProvider {
     static var previews: some View {
         HomeViewTab()
+    }
+}
+
+struct HorizontalView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Shoulders")
+                    .fontWeight(.bold)
+                Spacer()
+                Button(action: {
+                    print("See All")
+                }) {
+                    Text("see all")
+                }
+            }.padding(.horizontal)
+            HStack {
+                VCard()
+            }
+        }
     }
 }
