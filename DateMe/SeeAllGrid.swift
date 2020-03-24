@@ -12,7 +12,10 @@ import SwiftUI
 
 struct SeeAllGrid: View {
     var body: some View {
-        Text("Hello from See All Grid")
+        
+        Image("cocktail1")
+            .resizable()
+        .padding()
     }
 }
 
