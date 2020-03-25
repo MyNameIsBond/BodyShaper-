@@ -1,21 +1,30 @@
-//
-//  SeeAllGrid.swift
-//  DateMe
-//
-//  Created by Tony Hajdini on 23/03/2020.
-//  Copyright © 2020 Tony Hajdini. All rights reserved.
-//
 
-//TODO A grid to show the specific ex
 
 import SwiftUI
 
 struct SeeAllGrid: View {
+    let numberOfLegs = ["spider", "ant", "cat"]
     var body: some View {
-        
-        Image("cocktail1")
-            .resizable()
-        .padding()
+        NavigationView {
+        List {
+        HStack {
+            Image("cocktail1")
+                .resizable()
+                .frame(minWidth: 50, idealWidth: 50, maxWidth: 50, minHeight: 50, idealHeight: 50, maxHeight: 50)
+            Text("Cocktail")
+            
+                }
+            }
+        .navigationBarHidden(true)
+        .navigationBarTitle(Text("Shoulders"))
+        .navigationBarItems(trailing:
+                       Button("Help") {
+                           print("Help tapped!")
+                       }
+                   )
+            
+        }
+         
     }
 }
 
