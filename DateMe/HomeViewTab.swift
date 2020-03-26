@@ -33,17 +33,18 @@ struct VCard: View {
         VStack {
             ScrollView(.horizontal,showsIndicators: true) {
                 HStack {
+                   ForEach(1...8, id: \.self) { n in
                     VStack(alignment:.leading) {
-                        Image("cocktail1").resizable()
-                            .cornerRadius(4)
-                        Text("Cocktail Dolores")
-                        .font(.footnote)
-                        Text("Cocktail Sub")
-                            .font(.footnote)
-                        
-                            .fontWeight(.light)
-                    }.frame(minWidth: 200, idealWidth: 200, maxWidth: 250, minHeight: 200, idealHeight: 200, maxHeight: 250)
-                   
+                   Image("shoulders\(n)").resizable()
+                       .cornerRadius(4)
+                   Text("shoulders\(n)")
+                       .font(.footnote)
+                       .fontWeight(.semibold)
+                   Text("shoulders\(n)")
+                       .font(.footnote)
+                       .fontWeight(.light)
+                   }.frame(minWidth: 200, idealWidth: 200, maxWidth: 250, minHeight: 200, idealHeight: 200, maxHeight: 250)
+                    }
                 }.padding(.leading)
             }
         }

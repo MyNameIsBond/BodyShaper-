@@ -3,29 +3,26 @@
 import SwiftUI
 
 struct SeeAllGrid: View {
-    let numberOfLegs = ["spider", "ant", "cat"]
+    var numberOfLegs = ["spider", "ant", "cat"]
     var body: some View {
-        NavigationView {
-        List {
+        List(1..<8) { n in
         HStack {
-            Image("cocktail1")
+            Image("shoulders\(n)")
                 .resizable()
-                .frame(minWidth: 50, idealWidth: 50, maxWidth: 50, minHeight: 50, idealHeight: 50, maxHeight: 50)
-            Text("Cocktail")
+                .clipped()
+            .cornerRadius(5)
+                .frame(minWidth: 80, idealWidth: 80, maxWidth: 80, minHeight: 80, idealHeight: 80, maxHeight: 80)
             
+                VStack(alignment: .leading) {
+                    Text("Shoulders \(n)")
+                        .fontWeight(.semibold)
+                    Text("Shoulders")
+                        .font(.subheadline)
                 }
             }
-        .navigationBarHidden(true)
-        .navigationBarTitle(Text("Shoulders"))
-        .navigationBarItems(trailing:
-                       Button("Help") {
-                           print("Help tapped!")
-                       }
-                   )
-            
         }
-         
-    }
+        .navigationBarTitle("Shoulders")
+        }
 }
 
 struct SeeAllGrid_Previews: PreviewProvider {
