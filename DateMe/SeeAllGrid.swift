@@ -10,15 +10,14 @@ struct SeeAllGrid: View {
             Image("shoulders\(n)")
                 .resizable()
                 .clipped()
-            .cornerRadius(5)
+                .cornerRadius(5)
                 .frame(minWidth: 80, idealWidth: 80, maxWidth: 80, minHeight: 80, idealHeight: 80, maxHeight: 80)
-            
-                VStack(alignment: .leading) {
-                    Text("Shoulders \(n)")
-                        .fontWeight(.semibold)
-                    Text("Shoulders")
-                        .font(.subheadline)
-                }
+            VStack(alignment: .leading) {
+                Text("Shoulders \(n)")
+                    .fontWeight(.semibold)
+                Text("Shoulders")
+                    .font(.subheadline)
+            }
             }
         }
         .navigationBarTitle("Shoulders")

@@ -4,15 +4,14 @@ import SwiftUI
 struct HomeViewTab: View {
     
     @State var photos: [Photos] = []
-
-    private func seeAll() {
-        print("See All")
-    }
     
     var body: some View {
         NavigationView() {
-        ScrollView {
-            HorizontalView()
+        ScrollView(showsIndicators: false) {
+            HorizontalView(type: "shoulders")
+            HorizontalView(type: "legs")
+            HorizontalView(type: "shoulders")
+            HorizontalView(type: "legs")
         }
         .navigationBarTitle("Exercises", displayMode: .automatic)
         
@@ -28,19 +27,19 @@ struct HomeViewTab: View {
 // Subheadline - String
 
 struct VCard: View {
-    
+    let type: String
     var body: some View {
         VStack {
-            ScrollView(.horizontal,showsIndicators: true) {
+            ScrollView(.horizontal,showsIndicators: false) {
                 HStack {
                    ForEach(1...8, id: \.self) { n in
                     VStack(alignment:.leading) {
-                   Image("shoulders\(n)").resizable()
+                    Image("\(self.type)\(n)").resizable()
                        .cornerRadius(4)
-                   Text("shoulders\(n)")
+                        Text("\(self.type)\(n)")
                        .font(.footnote)
                        .fontWeight(.semibold)
-                   Text("shoulders\(n)")
+                        Text("\(self.type)\(n)")
                        .font(.footnote)
                        .fontWeight(.light)
                    }.frame(minWidth: 200, idealWidth: 200, maxWidth: 250, minHeight: 200, idealHeight: 200, maxHeight: 250)
@@ -60,10 +59,11 @@ struct HomeViewTab_Previews: PreviewProvider {
 }
 
 struct HorizontalView: View {
+    let type: String
     var body: some View {
         VStack {
             HStack {
-                Text("Shoulders")
+                Text(type)
                     .fontWeight(.bold)
                     .font(.headline)
                 Spacer()
@@ -72,7 +72,7 @@ struct HorizontalView: View {
                 }
             }.padding(.horizontal)
             HStack {
-                VCard()
+                VCard(type: type)
             }
         }
     }

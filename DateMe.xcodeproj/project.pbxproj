@@ -12,6 +12,7 @@
 		EA54E97423CB866600076437 /* HomeViewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54E97323CB866600076437 /* HomeViewTab.swift */; };
 		EA54E97623CB897300076437 /* SearchViewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54E97523CB897300076437 /* SearchViewTab.swift */; };
 		EA54E97823CB911E00076437 /* RandomViewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54E97723CB911E00076437 /* RandomViewTab.swift */; };
+		EA9863CE242D6CB300FEB3EC /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9863CD242D6CB300FEB3EC /* ExerciseView.swift */; };
 		EACC8A3E23C49940006BE674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC8A3D23C49940006BE674 /* AppDelegate.swift */; };
 		EACC8A4023C49940006BE674 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC8A3F23C49940006BE674 /* SceneDelegate.swift */; };
 		EACC8A4223C49940006BE674 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC8A4123C49940006BE674 /* ContentView.swift */; };
@@ -45,6 +46,7 @@
 		EA54E97323CB866600076437 /* HomeViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTab.swift; sourceTree = "<group>"; usesTabs = 0; };
 		EA54E97523CB897300076437 /* SearchViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTab.swift; sourceTree = "<group>"; };
 		EA54E97723CB911E00076437 /* RandomViewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewTab.swift; sourceTree = "<group>"; };
+		EA9863CD242D6CB300FEB3EC /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		EACC8A3A23C49940006BE674 /* DateMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACC8A3D23C49940006BE674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EACC8A3F23C49940006BE674 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				EACC8A4123C49940006BE674 /* ContentView.swift */,
 				EACC8A4323C49942006BE674 /* Assets.xcassets */,
 				EA236D6C24293BDC0035CB59 /* SeeAllGrid.swift */,
+				EA9863CD242D6CB300FEB3EC /* ExerciseView.swift */,
 				EACC8A4823C49942006BE674 /* LaunchScreen.storyboard */,
 				EACC8A4B23C49942006BE674 /* Info.plist */,
 				EACC8A4523C49942006BE674 /* Preview Content */,
@@ -293,6 +296,7 @@
 				EA54E97623CB897300076437 /* SearchViewTab.swift in Sources */,
 				EACC8A3E23C49940006BE674 /* AppDelegate.swift in Sources */,
 				EA54E97423CB866600076437 /* HomeViewTab.swift in Sources */,
+				EA9863CE242D6CB300FEB3EC /* ExerciseView.swift in Sources */,
 				EACC8A4023C49940006BE674 /* SceneDelegate.swift in Sources */,
 				EACC8A4223C49940006BE674 /* ContentView.swift in Sources */,
 				EA514EB323C5C2D40064EEBF /* Cocktail.swift in Sources */,
