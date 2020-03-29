@@ -1,10 +1,10 @@
 
-
 import SwiftUI
 
 struct SeeAllGrid: View {
     var numberOfLegs = ["spider", "ant", "cat"]
     var body: some View {
+        
         List(1..<8) { n in
         HStack {
             Image("shoulders\(n)")
@@ -17,7 +17,10 @@ struct SeeAllGrid: View {
                     .fontWeight(.semibold)
                 Text("Shoulders")
                     .font(.subheadline)
-            }
+                }
+            Spacer()
+            
+            Image(systemName: "chevron.right")
             }
         }
         .navigationBarTitle("Shoulders")

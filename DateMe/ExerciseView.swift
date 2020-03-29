@@ -11,14 +11,16 @@ import SwiftUI
 struct ExerciseView: View {
     var body: some View {
         VStack {
-                VStack {
-                    ZStack {
-                        Image("legs1").resizable()
-                        VStack {
-                        Text("this is smarta")
-                        }
+            VStack {
+                ZStack {
+                    Image("legs1").resizable()
+                    VStack {
+                        
+                        Text("this is sparta")
+                            .font(.title)
                     }
-                    }.padding().frame(width: 100, height: 100)
+                }
+            }.padding().frame(width: 100, height: 100)
         }.background(Color.black)
     }
 }

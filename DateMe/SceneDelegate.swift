@@ -1,10 +1,4 @@
-//
-//  SceneDelegate.swift
-//  DateMe
-//
-//  Created by Tony Hajdini on 07/01/2020.
-//  Copyright © 2020 Tony Hajdini. All rights reserved.
-//
+
 
 import UIKit
 import SwiftUI
