@@ -33,6 +33,7 @@ struct VCard: View {
             ScrollView(.horizontal,showsIndicators: false) {
                 HStack {
                    ForEach(1...8, id: \.self) { n in
+                    NavigationLink(destination: ExerciseView()){
                     VStack(alignment:.leading) {
                     Image("\(self.type)\(n)").resizable()
                        .cornerRadius(4)
@@ -43,6 +44,7 @@ struct VCard: View {
                        .font(.footnote)
                        .fontWeight(.light)
                    }.frame(minWidth: 200, idealWidth: 200, maxWidth: 250, minHeight: 200, idealHeight: 200, maxHeight: 250)
+                     }.buttonStyle(PlainButtonStyle())
                     }
                 }.padding(.leading)
             }
