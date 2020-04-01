@@ -14,12 +14,7 @@ struct ExerciseView: View {
         VStack {
             ListView()
         }
-    }
-}
-
-struct ExerciseView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExerciseView()
+        .navigationBarTitle("", displayMode: .inline)
     }
 }
 
@@ -27,6 +22,17 @@ struct ListView: View {
     var body: some View {
         List {
             ListTitle()
+            HStack {
+                Text("1st set should be 1 minute(s)")
+                Spacer()
+                Image(systemName: "plus").foregroundColor(Color.blue)
+            }.padding(.vertical)
+            HStack {
+                Text("2nd set should be 2 minute(s)")
+                Spacer()
+                Image(systemName: "plus")
+                    .foregroundColor(Color.blue)
+            }.padding(.vertical)
         }
     }
 }
@@ -39,38 +45,40 @@ struct ListTitle: View {
                     .frame(width: 120, height: 120)
                     .cornerRadius(4)
                 VStack(alignment: .leading) {
-                    Text("Legs")
+                    Text("Vale to top megale")
                         .font(.title)
                         .bold()
                     Text("Legs")
                         .font(.subheadline)
-                    Spacer()
-                    Button(action: {
-                        print("Hello Motherfucker")
-                    }) {
-                        HStack{
-                            Image(systemName: "plus")
-                                .foregroundColor(Color.white)
-                            Text("ADD")
-                                .foregroundColor(Color.white)
-                                .font(.subheadline)
-                        }.padding(.horizontal)
-                            .padding(.vertical,5)
+                        .foregroundColor(Color.blue)
+                    HStack {
+                        Button(action: {
+                            print("Hello Motherfucker")
+                        }) {
+                            HStack{
+                                Image(systemName: "plus")
+                                    .font(.subheadline)
+                                    .foregroundColor(Color.white)
+                                    .font(Font.title.weight(.bold))
+                                Text("ADD")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.white)
+                                    .font(.subheadline)
+                            }.padding(.horizontal)
+                                .padding(.vertical,5)
+                        }
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(.infinity)
+                        Spacer()
+                        Button(action: {
+                            print("Hello")
+                        }) {
+                            Image(systemName: "calendar.circle.fill")
+                                .font(.title)
+                                .foregroundColor(Color.blue)
+                        }
                     }
-                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
-                    .cornerRadius(.infinity)
                 }.padding(.leading)
-                Spacer()
-                VStack {
-                    Spacer()
-                    Button(action: {
-                        print("Hello")
-                    }) {
-                        Image(systemName: "calendar.circle.fill")
-                            .font(.title)
-                            .foregroundColor(Color.blue)
-                    }
-                }
             }
             HStack {
                 VStack(alignment: .leading) {
@@ -80,13 +88,19 @@ struct ListTitle: View {
                         .font(.subheadline)
                 }
                 Spacer()
-                VStack {
-                    Text("Stars")
+                VStack(alignment: .trailing) {
+                    Text("30 Reps")
                         .font(.title)
-                    Text("Difficulty")
+                    Text("3 sets")
                         .font(.subheadline)
                 }
             }.padding(.vertical)
-        }
+        }.padding(.vertical)
+    }
+}
+
+struct ExerciseView_Previews: PreviewProvider {
+    static var previews: some View {
+        ExerciseView().environment(\.colorScheme, .dark)
     }
 }
