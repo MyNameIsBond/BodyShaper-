@@ -25,23 +25,42 @@ struct ListView: View {
             HStack {
                 Text("1st set should be 1 minute(s)")
                 Spacer()
-                Image(systemName: "plus").foregroundColor(Color.blue)
+                Button(action: {
+                    print("print")
+                }) {
+                   Image(systemName: "plus")
+                   .foregroundColor(Color.blue)
+                   }
             }.padding(.vertical)
             HStack {
                 Text("2nd set should be 2 minute(s)")
                 Spacer()
-                Image(systemName: "plus")
-                    .foregroundColor(Color.blue)
+                Button(action: {
+                    print("asd")
+                }) {
+                   Image(systemName: "plus")
+                   .foregroundColor(Color.blue)
+                   }
             }.padding(.vertical)
+            HStack {
+               Text("3rd set should be 2 minute(s)")
+               Spacer()
+                Button(action: {
+                    print("oti nane")
+                }) {
+                    Image(systemName: "plus")
+                    .foregroundColor(Color.blue)
+                }
+               }.padding(.vertical)
         }
     }
 }
     
 struct ListTitle: View {
     var body: some View {
-        VStack{
+        VStack {
             HStack {
-                Image("legs2").resizable()
+                Image("legs4").resizable()
                     .frame(width: 120, height: 120)
                     .cornerRadius(4)
                 VStack(alignment: .leading) {
@@ -101,6 +120,6 @@ struct ListTitle: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView().environment(\.colorScheme, .dark)
+        ExerciseView().environment(\.colorScheme, .light)
     }
 }
