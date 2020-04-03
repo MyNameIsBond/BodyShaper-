@@ -23,7 +23,7 @@ struct ContentView: View {
                     }
             }.tag(1)
             
-            SearchViewTab().tabItem{
+            SearchViewTab(search: .constant("")).tabItem{
                     VStack {
                     Image(systemName: "magnifyingglass")
                     }

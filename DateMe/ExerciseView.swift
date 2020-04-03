@@ -52,6 +52,16 @@ struct ListView: View {
                     .foregroundColor(Color.blue)
                 }
                }.padding(.vertical)
+            HStack {
+                        Text("3rd set should be 2 minute(s)")
+                        Spacer()
+                         Button(action: {
+                             print("oti nane")
+                         }) {
+                             Image(systemName: "plus")
+                             .foregroundColor(Color.blue)
+                         }
+                        }.padding(.vertical)
         }
     }
 }

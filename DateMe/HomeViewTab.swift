@@ -14,7 +14,6 @@ struct HomeViewTab: View {
             HorizontalView(type: "legs")
         }
         .navigationBarTitle("Exercises", displayMode: .automatic)
-        
         }
     }
 }
@@ -51,8 +50,6 @@ struct VCard: View {
         }
     }
 }
-
-
 
 struct HomeViewTab_Previews: PreviewProvider {
     static var previews: some View {
