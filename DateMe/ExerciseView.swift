@@ -94,8 +94,9 @@ struct ListTitle: View {
                                     .foregroundColor(Color.white)
                                     .font(.subheadline)
                             }.padding(.horizontal)
-                                .padding(.vertical,5)
+                             .padding(.vertical,5)
                         }
+                            
                         .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(.infinity)
                         Spacer()
