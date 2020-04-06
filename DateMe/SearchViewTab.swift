@@ -11,15 +11,15 @@ import SwiftUI
 struct SearchViewTab: View {
     
     @Binding var search: String
-    @State var selectedPick = 0
+    @State var selectedPick = "Exercise"
 
     func sortOutView() -> AnyView {
         switch selectedPick {
-        case 0:
+        case "Exercise":
             return AnyView(Tab0())
-            case 1:
+            case "Diet":
             return AnyView(Diet())
-            case 2:
+            case "Dolores":
             return AnyView(Tab2())
         default:
             return AnyView(Tab0())
@@ -35,9 +35,9 @@ struct SearchViewTab: View {
                 .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color.gray, lineWidth: 1))
             .padding()
             Picker("Numbers", selection: $selectedPick) {
-                    Text("Exercise").tag(0)
-                Text("Diet").tag(1)
-                    Text("Dolores").tag(2)
+                Text("Exercise").tag("Exercise")
+                Text("Diet").tag("Diet")
+                    Text("Dolores").tag("Dolores")
                 }.padding()
                .pickerStyle(SegmentedPickerStyle())
             sortOutView()
@@ -47,15 +47,13 @@ struct SearchViewTab: View {
 
 struct Diet: View {
     var body: some View {
-        List {
-            ForEach(1...7, id: \.self) { ee in
-                HStack {
-                    Image("cocktail1")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                    Text("Diet \(ee)")
-                    Text("asd")
-                }
+        GridStack(rows: 4, columns: 2) { row, col in
+            VStack(alignment: .leading) {
+                Image("food")
+                    .resizable()
+                    .cornerRadius(5)
+                    .aspectRatio(contentMode: .fill)
+                Text("R\(row) C\(col)")
             }
         }
     }
@@ -109,6 +107,6 @@ struct TabinView: View {
 
 struct SearchViewTab_Previews: PreviewProvider {
     static var previews: some View {
-        SearchViewTab(search: .constant(""), selectedPick: 1)
+        SearchViewTab(search: .constant(""), selectedPick: "Exercise").environment(\.colorScheme, .dark)
     }
 }

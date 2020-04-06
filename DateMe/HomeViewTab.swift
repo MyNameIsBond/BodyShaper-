@@ -51,11 +51,7 @@ struct VCard: View {
     }
 }
 
-struct HomeViewTab_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeViewTab()
-    }
-}
+
 
 struct HorizontalView: View {
     let type: String
@@ -74,5 +70,11 @@ struct HorizontalView: View {
                 VCard(type: type)
             }
         }
+    }
+}
+
+struct HomeViewTab_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeViewTab()
     }
 }
