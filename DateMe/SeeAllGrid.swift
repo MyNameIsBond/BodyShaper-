@@ -19,7 +19,6 @@ struct SeeAllGrid: View {
                     .font(.subheadline)
                 }
             Spacer()
-            
             Image(systemName: "chevron.right")
             }
         }

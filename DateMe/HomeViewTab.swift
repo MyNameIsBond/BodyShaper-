@@ -35,7 +35,8 @@ struct VCard: View {
                     NavigationLink(destination: ExerciseView()){
                     VStack(alignment:.leading) {
                     Image("\(self.type)\(n)").resizable()
-                       .cornerRadius(4)
+                        .cornerRadius(4)
+                        
                         Text("\(self.type)\(n)")
                        .font(.footnote)
                        .fontWeight(.semibold)
@@ -43,6 +44,7 @@ struct VCard: View {
                        .font(.footnote)
                        .fontWeight(.light)
                    }.frame(minWidth: 200, idealWidth: 200, maxWidth: 250, minHeight: 200, idealHeight: 200, maxHeight: 250)
+                        
                      }.buttonStyle(PlainButtonStyle())
                     }
                 }.padding(.leading)
