@@ -22,7 +22,7 @@ struct SeeAllGrid: View {
             Image(systemName: "chevron.right")
             }
         }
-        .navigationBarTitle("Shoulders")
+        .navigationBarTitle("Shoulders All over")
         }
 }
 
