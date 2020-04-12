@@ -23,6 +23,7 @@ struct SeeAllGrid: View {
             }
         }
         .navigationBarTitle("Shoulders All over")
+//        Comment out my code
         }
 }
 
