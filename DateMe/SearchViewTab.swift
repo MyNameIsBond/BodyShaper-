@@ -74,11 +74,6 @@ struct Tab1: View {
        List {
             Text("tab1")
             Text("tab1")
-            Text("tab1")
-            Text("tab1")
-            Text("tab1")
-            Text("tab1")
-            
         }
     }
 }
@@ -92,12 +87,25 @@ struct Tab2: View {
             Text("tab2")
             Text("tab2")
             Text("tab2")
-            
+        }
+    }
+}
+
+struct Tab2222: View {
+    var body: some View {
+       List {
+            Text("tab2")
+            Text("tab2")
+            Text("tab2")
+            Text("tab2")
+            Text("tab2")
+            Text("tab2")
         }
     }
 }
 
 struct TabinView: View {
+    
     let selectedPick: Int
     
     var body: some View {
@@ -107,6 +115,6 @@ struct TabinView: View {
 
 struct SearchViewTab_Previews: PreviewProvider {
     static var previews: some View {
-        SearchViewTab(search: .constant(""), selectedPick: "Exercise").environment(\.colorScheme, .dark)
+        SearchViewTab(search: .constant(""), selectedPick: "Exercise")
     }
 }
