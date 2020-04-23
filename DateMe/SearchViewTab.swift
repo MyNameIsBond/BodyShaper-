@@ -21,6 +21,8 @@ struct SearchViewTab: View {
             return AnyView(Diet())
             case "Dolores":
             return AnyView(Tab2())
+            case "e":
+                       return AnyView(Tab2())
         default:
             return AnyView(Tab0())
         }
@@ -91,7 +93,8 @@ struct Tab2: View {
     }
 }
 
-struct Tab2222: View {
+struct Tab2222pq: View {
+    
     var body: some View {
        List {
             Text("tab2")
