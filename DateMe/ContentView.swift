@@ -13,7 +13,7 @@ struct ContentView: View {
         TabView {
             RandomViewTab().tabItem{
                     VStack {
-                    Image(systemName: "tv.fill")
+                    Image(systemName: "person.fill")
                     }
             }.tag(0)
             

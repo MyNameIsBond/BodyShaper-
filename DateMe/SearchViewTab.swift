@@ -16,15 +16,13 @@ struct SearchViewTab: View {
     func sortOutView() -> AnyView {
         switch selectedPick {
         case "Exercise":
-            return AnyView(Tab0())
+            return AnyView(Excercise())
             case "Diet":
             return AnyView(Diet())
-            case "Dolores":
-            return AnyView(Tab2())
-            case "e":
-                       return AnyView(Tab2())
+            case "Routes":
+            return AnyView(Routes())
         default:
-            return AnyView(Tab0())
+            return AnyView(Excercise())
         }
     }
     
@@ -39,7 +37,7 @@ struct SearchViewTab: View {
             Picker("Numbers", selection: $selectedPick) {
                 Text("Exercise").tag("Exercise")
                 Text("Diet").tag("Diet")
-                    Text("Dolores").tag("Dolores")
+                    Text("Routes").tag("Routes")
                 }.padding()
                .pickerStyle(SegmentedPickerStyle())
             sortOutView()
@@ -57,55 +55,75 @@ struct Diet: View {
                     .aspectRatio(contentMode: .fill)
                 Text("R\(row) C\(col)")
             }
-        }
+        }.padding(.horizontal)
     }
 }
 
-struct Tab0: View {
+struct Excercise: View {
     var body: some View {
         List {
             ForEach(1...7, id: \.self) { ee in
-                Text("tab\(ee)")
+                VStack(alignment: .leading) {
+                Image("legs\(ee)").resizable()
+                    .cornerRadius(20)
+                    Text("Legs \(ee)")
+                        .font(.headline)
+                    Text("Legs \(ee)")
+                        .font(.subheadline)
+                }.frame(width: UIScreen.screenWidth, height: 300)
             }
         }
     }
 }
 
-struct Tab1: View {
-    var body: some View {
-       List {
-            Text("tab1")
-            Text("tab1")
-        }
-    }
+extension UIScreen{
+   static let screenWidth = UIScreen.main.bounds.size.width
+   static let screenHeight = UIScreen.main.bounds.size.height
+   static let screenSize = UIScreen.main.bounds.size
 }
 
-struct Tab2: View {
-    var body: some View {
-       List {
-            Text("tab2")
-            Text("tab2")
-            Text("tab2")
-            Text("tab2")
-            Text("tab2")
-            Text("tab2")
-        }
-    }
-}
-
-struct Tab2222pq: View {
+// Route View
+struct Routes: View {
     
     var body: some View {
-       List {
-            Text("tab2")
-            Text("tab2")
-            Text("tab2")
-            Text("tab2")
-            Text("tab2")
-            Text("tab2")
+    ScrollView {
+        VStack(alignment: .leading) {
+            MapView()
+                .frame( width: UIScreen.screenWidth - 20,height: 200)
+                .cornerRadius(5)
+            HStack {
+                Image(systemName: "mappin")
+                Text("Coventry, England")
+                }
+            Text("4.5 km").font(.subheadline)
+            }
+        .shadow(radius: 5)
+        VStack(alignment: .leading) {
+                   MapView()
+                       .frame( width: UIScreen.screenWidth - 20,height: 200)
+                       .cornerRadius(5)
+                   HStack {
+                       Image(systemName: "mappin")
+                       Text("Coventry, England")
+                       }
+                   Text("4.5 km").font(.subheadline)
+                   }
+               .shadow(radius: 5)
+        VStack(alignment: .leading) {
+                   MapView()
+                       .frame( width: UIScreen.screenWidth - 20,height: 200)
+                       .cornerRadius(5)
+                   HStack {
+                       Image(systemName: "mappin")
+                       Text("Coventry, England")
+                       }
+                   Text("4.5 km").font(.subheadline)
+                   }
+               .shadow(radius: 5)
         }
     }
 }
+
 
 struct TabinView: View {
     

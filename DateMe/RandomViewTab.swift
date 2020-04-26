@@ -12,7 +12,9 @@ struct RandomViewTab: View {
     var body: some View {
         NavigationView {
         Text("Random View")
+         .navigationBarTitle("Scehule")
         }
+   
     }
 }
 
