@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct ExerciseView: View {
     
     var body: some View {
@@ -67,6 +68,7 @@ struct ListView: View {
 }
     
 struct ListTitle: View {
+    @State var showingAlert:Bool = false
     var body: some View {
         VStack {
             HStack {
@@ -74,15 +76,15 @@ struct ListTitle: View {
                     .frame(width: 120, height: 120)
                     .cornerRadius(4)
                 VStack(alignment: .leading) {
-                    Text("Vale to top megale")
+                    Text("Step squats")
                         .font(.title)
                         .bold()
-                    Text("Legs")
+                    Text("waist")
                         .font(.subheadline)
                         .foregroundColor(Color.blue)
                     HStack {
                         Button(action: {
-                            print("Hello Motherfucker")
+                            self.showingAlert = true
                         }) {
                             HStack{
                                 Image(systemName: "plus")
@@ -95,8 +97,9 @@ struct ListTitle: View {
                                     .font(.subheadline)
                             }.padding(.horizontal)
                              .padding(.vertical,5)
+                        }.alert(isPresented: $showingAlert) {
+                        Alert(title: Text("Data Collection"), message: Text("your actions in this application will be collected for better results in suggesting the right food and exercise. Thus, the application can't be responsible for what users decide at their own discretion"), dismissButton: .default(Text("I agree to share")))
                         }
-                            
                         .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(.infinity)
                         Spacer()

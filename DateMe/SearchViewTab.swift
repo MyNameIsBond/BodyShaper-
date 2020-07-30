@@ -12,13 +12,14 @@ struct SearchViewTab: View {
     
     @Binding var search: String
     @State var selectedPick = "Exercise"
+    @State private var showingAlert = false
 
     func sortOutView() -> AnyView {
         switch selectedPick {
         case "Exercise":
             return AnyView(Excercise())
             case "Diet":
-            return AnyView(Diet())
+                return AnyView(Diet())
             case "Routes":
             return AnyView(Routes())
         default:
@@ -46,10 +47,11 @@ struct SearchViewTab: View {
 }
 
 struct Diet: View {
+    
     var body: some View {
         GridStack(rows: 4, columns: 2) { row, col in
             VStack(alignment: .leading) {
-                Image("food")
+                Image("food10")
                     .resizable()
                     .cornerRadius(5)
                     .aspectRatio(contentMode: .fill)

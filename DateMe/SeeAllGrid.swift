@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct SeeAllGrid: View {
-    var numberOfLegs = ["spider", "ant", "cat"]
+    
     var body: some View {
         
         List(1..<8) { n in

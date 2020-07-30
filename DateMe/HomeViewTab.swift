@@ -6,15 +6,18 @@ struct HomeViewTab: View {
     @State var photos: [Photos] = []
     
     var body: some View {
-        NavigationView() {
+        NavigationView {
+            
+        
         ScrollView(showsIndicators: false) {
             HorizontalView(type: "shoulders")
             HorizontalView(type: "legs")
             HorizontalView(type: "shoulders")
             HorizontalView(type: "legs")
-        }
+            HorizontalView(type: "shoulders")
+            }
         .navigationBarTitle("Exercises", displayMode: .automatic)
-        }
+            }
     }
 }
 
@@ -29,6 +32,7 @@ struct VCard: View {
     let type: String
     var body: some View {
         VStack {
+            
             ScrollView(.horizontal,showsIndicators: false) {
                 HStack {
                    ForEach(1...8, id: \.self) { n in
